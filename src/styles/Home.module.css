@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
@@ -19,6 +21,7 @@
     height: 100vh;
     width: 100%;
     gap: 10px;
+    color: #fff;
     padding-top: 10px;
     .section_form {
       display: flex;
@@ -32,11 +35,20 @@
         flex-direction: row;
         justify-content: center;
         gap: 5px;
+        .select_options_main {
+          border-radius: 18px;
+          background-color: var(--color-claro-base);
+          border: 1px solid var(--yellow-base);
+        }
       }
       .body_message {
         width: 100%;
         height: 100%;
         padding: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        background-color: var(--color-claro-base);
+        color: var(--text-placeholder-claro);
       }
       .button_send {
         display: flex;
@@ -44,22 +56,34 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-        width: 60%;
+        width: 300px;
         height: 80px;
         font-size: 18px;
+        background-color: var(--orange-base);
+        border: 1px solid var(--text-placeholder-claro);
+        color: var(--color-dark-base);
+        border-radius: 15px;
       }
       .icon_send {
         font-size: 15px;
       }
-      .input_number{
+      .input_number {
         height: 40px;
         font-size: 18px;
         padding-left: 5px;
+        background-color: var(--color-claro-base);
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        color: var(--button-primary-hover);
       }
-      .option_select{
+      .input_number::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
+      }
+      .option_select {
         font-size: 18px;
       }
-      .sub_title{
+      .sub_title {
         font-size: 18px;
       }
     }
@@ -84,9 +108,18 @@
         gap: 5px;
         font-size: 18px;
         .input_save {
+          background-color: var(--color-claro-base);
+          border-radius: 15px;
+          border: 1px solid var(--yellow-base);
+          color: var(--button-primary-hover);
           padding-left: 5px;
           height: 40px;
           font-size: 18px;
+          width: 300px;
+        }
+        .input_save::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
         }
       }
     }
@@ -96,9 +129,13 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
-      width: 40%;
+      width: 300px;
       height: 35px;
       font-size: 18px;
+      background-color: var(--orange-base);
+      border: 1px solid var(--text-placeholder-claro);
+      color: var(--color-dark-base);
+      border-radius: 15px;
     }
     .icon_save {
       font-size: 18px;
@@ -118,22 +155,27 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 300px;
       gap: 10px;
+      color: var(--color-dark-base);
       .name_contact {
+        background-color: var(--orange-base);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         border: 1px solid #fff;
-        border-radius: 5px;
+        border-radius: 25px;
         padding: 5px;
-        width: 50%;
+        width: 100%;
         height: 45px;
         font-size: 18px;
       }
-      .name_contact_delete{
-        font-size: 18px;
+      .name_contact_delete {
+       font-size: 35px;
+        background-color: --var(--text-placeholder-claro);
+        border-radius: 50%;
+        border: 1px;
       }
     }
   }
@@ -141,7 +183,7 @@
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 1023px) {
-   .main_body {
+ .main_body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -149,6 +191,7 @@
     height: 100vh;
     width: 100%;
     gap: 10px;
+    color: #fff;
     padding-top: 10px;
     .section_form {
       display: flex;
@@ -162,11 +205,20 @@
         flex-direction: row;
         justify-content: center;
         gap: 5px;
+        .select_options_main {
+          border-radius: 18px;
+          background-color: var(--color-claro-base);
+          border: 1px solid var(--yellow-base);
+        }
       }
       .body_message {
         width: 100%;
         height: 100%;
         padding: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        background-color: var(--color-claro-base);
+        color: var(--text-placeholder-claro);
       }
       .button_send {
         display: flex;
@@ -174,22 +226,34 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-        width: 60%;
+        width: 300px;
         height: 80px;
         font-size: 18px;
+        background-color: var(--orange-base);
+        border: 1px solid var(--text-placeholder-claro);
+        color: var(--color-dark-base);
+        border-radius: 15px;
       }
       .icon_send {
         font-size: 15px;
       }
-      .input_number{
+      .input_number {
         height: 40px;
         font-size: 18px;
         padding-left: 5px;
+        background-color: var(--color-claro-base);
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        color: var(--button-primary-hover);
       }
-      .option_select{
+      .input_number::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
+      }
+      .option_select {
         font-size: 18px;
       }
-      .sub_title{
+      .sub_title {
         font-size: 18px;
       }
     }
@@ -214,9 +278,18 @@
         gap: 5px;
         font-size: 18px;
         .input_save {
+          background-color: var(--color-claro-base);
+          border-radius: 15px;
+          border: 1px solid var(--yellow-base);
+          color: var(--button-primary-hover);
           padding-left: 5px;
           height: 40px;
           font-size: 18px;
+          width: 300px;
+        }
+        .input_save::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
         }
       }
     }
@@ -226,9 +299,13 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
-      width: 40%;
+      width: 300px;
       height: 35px;
       font-size: 18px;
+      background-color: var(--orange-base);
+      border: 1px solid var(--text-placeholder-claro);
+      color: var(--color-dark-base);
+      border-radius: 15px;
     }
     .icon_save {
       font-size: 18px;
@@ -248,22 +325,27 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 300px;
       gap: 10px;
+      color: var(--color-dark-base);
       .name_contact {
+        background-color: var(--orange-base);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         border: 1px solid #fff;
-        border-radius: 5px;
+        border-radius: 25px;
         padding: 5px;
-        width: 50%;
+        width: 100%;
         height: 45px;
         font-size: 18px;
       }
-      .name_contact_delete{
-        font-size: 18px;
+      .name_contact_delete {
+        font-size: 35px;
+        background-color: --var(--text-placeholder-claro);
+        border-radius: 50%;
+        border: 1px;
       }
     }
   }
@@ -271,7 +353,7 @@
 
 /* Laptops */
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .main_body {
+ .main_body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -279,6 +361,7 @@
     height: 100vh;
     width: 100%;
     gap: 10px;
+    color: #fff;
     padding-top: 10px;
     .section_form {
       display: flex;
@@ -292,11 +375,20 @@
         flex-direction: row;
         justify-content: center;
         gap: 5px;
+        .select_options_main {
+          border-radius: 18px;
+          background-color: var(--color-claro-base);
+          border: 1px solid var(--yellow-base);
+        }
       }
       .body_message {
         width: 100%;
         height: 100%;
         padding: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        background-color: var(--color-claro-base);
+        color: var(--text-placeholder-claro);
       }
       .button_send {
         display: flex;
@@ -304,22 +396,34 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-        width: 60%;
+        width: 300px;
         height: 80px;
         font-size: 18px;
+        background-color: var(--orange-base);
+        border: 1px solid var(--text-placeholder-claro);
+        color: var(--color-dark-base);
+        border-radius: 15px;
       }
       .icon_send {
         font-size: 15px;
       }
-      .input_number{
+      .input_number {
         height: 40px;
         font-size: 18px;
         padding-left: 5px;
+        background-color: var(--color-claro-base);
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        color: var(--button-primary-hover);
       }
-      .option_select{
+      .input_number::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
+      }
+      .option_select {
         font-size: 18px;
       }
-      .sub_title{
+      .sub_title {
         font-size: 18px;
       }
     }
@@ -344,9 +448,18 @@
         gap: 5px;
         font-size: 18px;
         .input_save {
+          background-color: var(--color-claro-base);
+          border-radius: 15px;
+          border: 1px solid var(--yellow-base);
+          color: var(--button-primary-hover);
           padding-left: 5px;
           height: 40px;
+          width: 300px;
           font-size: 18px;
+        }
+        .input_save::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
         }
       }
     }
@@ -356,9 +469,13 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
-      width: 40%;
+      width: 300px;
       height: 35px;
       font-size: 18px;
+      background-color: var(--orange-base);
+      border: 1px solid var(--text-placeholder-claro);
+      color: var(--color-dark-base);
+      border-radius: 15px;
     }
     .icon_save {
       font-size: 18px;
@@ -378,22 +495,27 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 300px;
       gap: 10px;
+      color: var(--color-dark-base);
       .name_contact {
+        background-color: var(--orange-base);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         border: 1px solid #fff;
-        border-radius: 5px;
+        border-radius: 25px;
         padding: 5px;
-        width: 50%;
+        width: 100%;
         height: 45px;
         font-size: 18px;
       }
-      .name_contact_delete{
-        font-size: 18px;
+      .name_contact_delete {
+       font-size: 35px;
+        background-color: --var(--text-placeholder-claro);
+        border-radius: 50%;
+        border: 1px;
       }
     }
   }
@@ -401,7 +523,7 @@
 
 /* Pantallas grandes */
 @media (min-width: 1440px) {
-   .main_body {
+ .main_body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -409,6 +531,7 @@
     height: 100vh;
     width: 100%;
     gap: 10px;
+    color: #fff;
     padding-top: 10px;
     .section_form {
       display: flex;
@@ -422,11 +545,20 @@
         flex-direction: row;
         justify-content: center;
         gap: 5px;
+        .select_options_main {
+          border-radius: 18px;
+          background-color: var(--color-claro-base);
+          border: 1px solid var(--yellow-base);
+        }
       }
       .body_message {
         width: 100%;
         height: 100%;
         padding: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        background-color: var(--color-claro-base);
+        color: var(--text-placeholder-claro);
       }
       .button_send {
         display: flex;
@@ -434,22 +566,34 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-        width: 60%;
+        width: 300px;
         height: 80px;
         font-size: 18px;
+        background-color: var(--orange-base);
+        border: 1px solid var(--text-placeholder-claro);
+        color: var(--color-dark-base);
+        border-radius: 15px;
       }
       .icon_send {
         font-size: 15px;
       }
-      .input_number{
+      .input_number {
         height: 40px;
         font-size: 18px;
         padding-left: 5px;
+        background-color: var(--color-claro-base);
+        border-radius: 15px;
+        border: 1px solid var(--yellow-base);
+        color: var(--button-primary-hover);
       }
-      .option_select{
+      .input_number::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
+      }
+      .option_select {
         font-size: 18px;
       }
-      .sub_title{
+      .sub_title {
         font-size: 18px;
       }
     }
@@ -474,9 +618,18 @@
         gap: 5px;
         font-size: 18px;
         .input_save {
+          background-color: var(--color-claro-base);
+          border-radius: 15px;
+          border: 1px solid var(--yellow-base);
+          color: var(--button-primary-hover);
           padding-left: 5px;
           height: 40px;
           font-size: 18px;
+          width: 300px;
+        }
+        .input_save::placeholder {
+        color: var(--text-placeholder-claro);
+        opacity: 0.5;
         }
       }
     }
@@ -486,9 +639,13 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
-      width: 40%;
+      width: 300px;
       height: 35px;
       font-size: 18px;
+      background-color: var(--orange-base);
+      border: 1px solid var(--text-placeholder-claro);
+      color: var(--color-dark-base);
+      border-radius: 15px;
     }
     .icon_save {
       font-size: 18px;
@@ -508,22 +665,27 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 300px;
       gap: 10px;
+      color: var(--color-dark-base);
       .name_contact {
+        background-color: var(--orange-base);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         border: 1px solid #fff;
-        border-radius: 5px;
+        border-radius: 25px;
         padding: 5px;
-        width: 50%;
+        width: 100%;
         height: 45px;
         font-size: 18px;
       }
-      .name_contact_delete{
-        font-size: 18px;
+      .name_contact_delete {
+        font-size: 35px;
+        background-color: --var(--text-placeholder-claro);
+        border-radius: 50%;
+        border: 1px;
       }
     }
   }
