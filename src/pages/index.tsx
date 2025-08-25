@@ -19,6 +19,7 @@ export default function Home() {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [mensaje, setMensaje] = useState<string>('')
   const [error, setError] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
 
   const handleChangePrefijo = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -27,6 +28,7 @@ export default function Home() {
   };
   const handleChangePhoneNumber = (e: string) => {
     if (prefijo === ""){
+      setErrorMessage('Es necesario seleccionar un prefijo...')
       setError(true)
       return
     };
@@ -40,6 +42,7 @@ export default function Home() {
   };
   const handleMensaje = (e:string) =>{
     if (prefijo === ""){
+      setErrorMessage('Es necesario seleccionar un prefijo...')
       setError(true)
       return
     };
@@ -59,7 +62,12 @@ export default function Home() {
   }, []);
 
   const handleAddContact = async () => {
-    if (!nameContact || !numberPhone) return;
+    if (!nameContact || !numberPhone) {
+       setErrorMessage('Es necesario un nombre...')
+      setError(true)
+      return
+
+    };
 
     await addContact({ nameContact, numberPhone });
     setContacts(await getContacts());
