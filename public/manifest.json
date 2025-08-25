@@ -1,0 +1,21 @@
+{
+  "name": "Chat connect",
+  "short_name": "Connect",
+  "description": "Una webapp instalable para redirigir a whatsapp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#E70000",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
