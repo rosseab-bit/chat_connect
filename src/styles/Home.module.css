@@ -1,5 +1,13 @@
-@import "./variables.css";
-
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-dark-base: rgb(16, 73, 17);
+  --color-claro-base: rgb(84, 140, 47);
+  --yellow-base: rgb(255, 212, 73);
+  --orange-base: rgb(249, 166, 32);
+  --blue-base: rgb(168, 213, 226);
+  --text-placeholder-claro: #ddf4e7;
+}
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
