@@ -19,7 +19,7 @@
     height: 100vh;
     width: 100%;
     gap: 10px;
-    color: #fff;
+    color: var(--yellow-base);
     padding-top: 10px;
     .section_form {
       display: flex;
@@ -86,8 +86,8 @@
       }
     }
     .horizontal_line {
-      border-bottom: 1px solid #fff;
-      width: 95%;
+      border-bottom: 1px solid var(--orange-base);
+      width: 300px;
     }
     .form_save_number {
       display: flex;
@@ -256,8 +256,8 @@
       }
     }
     .horizontal_line {
-      border-bottom: 1px solid #fff;
-      width: 95%;
+      border-bottom: 1px solid var(--orange-base);
+      width: 300px;
     }
     .form_save_number {
       display: flex;
@@ -426,8 +426,8 @@
       }
     }
     .horizontal_line {
-      border-bottom: 1px solid #fff;
-      width: 95%;
+      border-bottom: 1px solid var(--orange-base);
+      width: 300px;
     }
     .form_save_number {
       display: flex;
@@ -596,8 +596,8 @@
       }
     }
     .horizontal_line {
-      border-bottom: 1px solid #fff;
-      width: 95%;
+      border-bottom: 1px solid var(--orange-base);
+      width: 300px;
     }
     .form_save_number {
       display: flex;

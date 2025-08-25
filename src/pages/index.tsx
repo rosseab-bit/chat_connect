@@ -78,7 +78,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main_body}`}>
-        <h1>Go WhatsApp 💬</h1>
+        <h1 >Go WhatsApp 💬</h1>
         <section className={`${styles.section_form}`}>
           <label className={`${styles.sub_title}`}>Phone Number 🔢📱</label>
           <div className={styles.form_body}>
