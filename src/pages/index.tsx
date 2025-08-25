@@ -6,6 +6,8 @@ import SendIcon from "@mui/icons-material/Send";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import { addContact, getContacts, deleteContact, Contact } from "@/utils/db";
 import { Orbitron, Rajdhani } from "next/font/google";
+import { Alert, Button, Stack } from "@mui/material";
+
 const orbitron = Orbitron({ subsets: ["latin"], weight: ["400", "700"] });
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["400", "600"] });
 
@@ -16,21 +18,31 @@ export default function Home() {
   const [nameContact, setNameContact] = useState<string>("");
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [mensaje, setMensaje] = useState<string>('')
+  const [error, setError] = useState<boolean>(false);
+
 
   const handleChangePrefijo = (e: React.ChangeEvent<HTMLSelectElement>) => {
     console.log(americaCountries[Number(e.target.value)].prefijo);
     setPrefijo(americaCountries[Number(e.target.value)].prefijo);
   };
   const handleChangePhoneNumber = (e: string) => {
+    if (prefijo === ""){
+      setError(true)
+      return
+    };
     const onlyNumber = e.replace(/\D/g, "");
-    if (prefijo === "") return;
+    console.log({onlyNumber})
     setNumberPhone(onlyNumber);
   };
   const handleChangeNameContact = (e: string) => {
+    if (prefijo === "") return;
     setNameContact(e);
   };
   const handleMensaje = (e:string) =>{
-    console.log(e)
+    if (prefijo === ""){
+      setError(true)
+      return
+    };
     setMensaje(e)
   }
   const loadContact = (item: Contact) => {
@@ -55,7 +67,6 @@ export default function Home() {
     setNumberComplete("");
   };
 
-  console.log("all contacts: ", contacts);
   const handleDelete = async (id?: number) => {
     if (!id) return;
     await deleteContact(id);
@@ -63,7 +74,8 @@ export default function Home() {
   };
 
   const redirectUrls = () => {
-    let url: string = `https://wa.me/${numberComplete}?text=${encodeURIComponent(mensaje)}`;;
+    let url: string = `https://wa.me/${numberComplete}?text=${encodeURIComponent(mensaje)}`;
+    //console.log({url})
     window.open(url, "_blank", "noopener,noreferrer");
     return null;
   };
@@ -78,6 +90,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main_body}`}>
+        {error && 
+        <Stack spacing={2} sx={{ width: "100%" }}>
+        <Alert
+          variant="filled"
+          severity="error"
+          onClose={() => setError(false)} // permite cerrar el alert
+        >
+          "Es necesario ingresar un prefijo..."
+        </Alert>
+        </Stack>
+        }
         <h1 >Go WhatsApp 💬</h1>
         <section className={`${styles.section_form}`}>
           <label className={`${styles.sub_title}`}>Phone Number 🔢📱</label>
