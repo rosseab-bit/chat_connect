@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 
 const withPWA = require("next-pwa")({
-  dest: "public"
+  dest: "public",
+  skipWaiting: true, // <- activa el nuevo service worker inmediatamente
+  clientsClaim: true // <- toma control de las páginas abiertas
 });
 
 module.exports = withPWA({
