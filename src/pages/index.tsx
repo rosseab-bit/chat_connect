@@ -47,6 +47,7 @@ export default function Home() {
   }
   const loadContact = (item: Contact) => {
     setNumberPhone(item.numberPhone);
+    setMensaje('');
   };
   useEffect(() => {
     const concatPrefijoNumber: string = prefijo + numberPhone;
@@ -74,6 +75,10 @@ export default function Home() {
   };
 
   const redirectUrls = () => {
+     if (prefijo === "" || numberPhone === ''){
+      setError(true)
+      return
+    };
     let url: string = `https://wa.me/${numberComplete}?text=${encodeURIComponent(mensaje)}`;
     //console.log({url})
     window.open(url, "_blank", "noopener,noreferrer");
